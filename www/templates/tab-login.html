@@ -1,0 +1,18 @@
+<ion-view title="DogTin">
+  <ion-content class="padding">
+    <div ng-if="!isAuthenticated()">
+      <button ng-click="authenticate('google')" class="button button-block icon-left ion-social-google">
+      Entre com o Google
+      </button>
+
+      <button ng-click="authenticate('facebook')" class="button button-block icon-left ion-social-facebook">Entre com o Facebook</button>
+    </div>
+
+
+    <div ng-if="isAuthenticated()">
+      <button ng-click="logout()" class="button button-block">
+        Sair
+      </button>
+    </div>
+  </ion-content>
+</ion-view>
